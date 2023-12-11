@@ -3,9 +3,12 @@
 
 // This Program is to refresh on C++ Classes
 // Made by Daily
+// I use 2 different methods to use the classes..
+// 1 with constructors the other without...
 
 // Function declartions
 int AnotherStud();
+int AnotherProf();
 int Stud1();
 int Stud2();
 int Stud3();
@@ -19,12 +22,34 @@ class Student
         std::string major;
         int gpa;
 
+
+};
+
+// This is a data type Prof
+class Prof
+{
+
+    public:
+    // The variables need to be defined
+    std::string name;
+    std::string school;
+
+    // This has to be the same ass Class name
+    Prof(std::string aName, std::string aSchool)
+    {
+        name = aName;
+        school = aSchool;
+
+    }
+
 };
 
 // Main Fucntion
 int main()
 {
-    std::cout << "Welcome to the Student Class Program" << std::endl;
+    int stud_prof;
+
+    std::cout << "Welcome to the Student | Prof Class Program" << std::endl;
     std::cout << "Press any key to begin ";
     // This will allow for any input to begin
     std::cin.get();
@@ -33,8 +58,28 @@ int main()
     // This will clear the screen
     std::system("cls");
 
+    std::cout << "Did you want info on Student or Prof?" <<std::endl;
+    std::cout << "1 for Student | 2 for Prof ";
+
+    std::cin >> stud_prof;
+    if(stud_prof == 1)
+    {
+    std::system("cls");      
     // Goes to Another Student Function
     AnotherStud();
+    }
+    if(stud_prof == 2)
+    {
+    std::system("cls");
+    AnotherProf();
+
+    }
+    else
+    {
+        std::cout <<"Wrong input try again!" << std::endl;
+        main();
+
+    }
 
     return 0;
 
@@ -91,15 +136,86 @@ int AnotherStud()
     }
     else
     {
-        std::cout << "You entered a wrong input";
+        std::cout << "You entered a wrong input" << std::endl;
         AnotherStud();
 
     }
 
 
     return 0;
+
 }
 
+
+int AnotherProf()
+{
+
+    int input2;
+
+    std::cout << "Would you like to see a Prof?" << std::endl;
+    std::cout << "1 = Yes | 2 = Exit" << std::endl; 
+
+    std::cin >> input2;
+    if(input2 == 1)
+    {
+
+        // User input of choice
+        int choice2;
+
+        std::cout << "Which Prof would you like to see?" << std::endl;
+        std::cout << "1,2, or 3?" << std::endl;
+        
+
+        std::cin >> choice2;
+        if(choice2 == 1)
+        {
+            Prof prof1("Jones","CSULA");
+            std::cout << prof1.name << std::endl;
+            std::system("cls");
+            AnotherProf();
+        }
+
+        if(choice2 == 2)
+        {
+            Prof prof2("Timmy", "CSULB");
+            std::cout << prof2.name << std::endl;
+            std::cout << prof2.school << std::endl; 
+            std::system("cls");
+            AnotherProf();
+
+        }
+        if(choice2 == 3)
+        {
+            Prof prof3("Carol", "LBCC");
+            std::cout << prof3.name << std::endl;
+            std::cout << prof3.school <<std::endl;
+            std::system("cls");
+            AnotherProf();
+
+        }
+        else
+        {
+            std::cout << "You entered a wrong input" << std::endl;
+            AnotherProf();
+        }
+    if(input2 == 2)
+    {
+        // Will exit the program
+        exit(0);
+
+    }
+    else
+    {
+        std::cout << "You entered a wrong input" << std::endl;
+        AnotherStud();
+
+    }
+
+    }
+
+    return 0;
+
+}
 
 // Student1
 int Stud1()
@@ -174,3 +290,5 @@ int Stud3()
 
 // Finishing adding Stud3
 // Next add the feature for input!
+
+// I added constructors
