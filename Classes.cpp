@@ -22,27 +22,22 @@ class Student
         std::string name;
         std::string major;
         int gpa;
-
-
 };
 
 // This is a data type Prof
 class Prof
 {
-
     public:
     // The variables need to be defined
     std::string name;
     std::string school;
 
-    // This has to be the same ass Class name
+    // This has to be the same ass Class name | Constructor
     Prof(std::string aName, std::string aSchool)
     {
         name = aName;
         school = aSchool;
-
     }
-
 };
 
 // Main Fucntion
@@ -73,7 +68,6 @@ int main()
     {
     std::system("cls");
     AnotherProf();
-
     }
     else
     {
@@ -126,19 +120,16 @@ int AnotherStud()
             std::cout <<"Wrong input try again!" << std::endl;
             AnotherStud();
         }
-
     }
     if(input1 == 2)
     {
         // Will exit the program
         exit(0);
-
     }
     else
     {
         std::cout << "You entered a wrong input" << std::endl;
         AnotherStud();
-
     }
 
 
@@ -158,13 +149,11 @@ int AnotherProf()
     std::cin >> input2;
     if(input2 == 1)
     {
-
         // User input of choice
         int choice2;
 
         std::cout << "Which Prof would you like to see?" << std::endl;
         std::cout << "1,2, or 3?" << std::endl;
-        
 
         std::cin >> choice2;
         if(choice2 == 1)
@@ -191,7 +180,6 @@ int AnotherProf()
             std::cout << prof3.school <<std::endl;
             std::system("cls");
             AnotherProf();
-
         }
         else
         {
@@ -202,13 +190,11 @@ int AnotherProf()
     {
         // Will exit the program
         exit(0);
-
     }
     else
     {
         std::cout << "You entered a wrong input" << std::endl;
         AnotherStud();
-
     }
 
     }
@@ -314,8 +300,12 @@ int Stud3()
 - Added Stud3
 */
 
+/* Updates: 
+-I added constructors 
 
-/* Future Updates:
-Finishing adding Stud3
-Next add the feature for input!
 */
+
+// Finishing adding Stud3
+// Next add the feature for input!
+
+// I added constructors
