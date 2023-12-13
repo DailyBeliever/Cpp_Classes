@@ -15,6 +15,7 @@ int Stud3();
 
 
 // This is a data type Student
+// No Constructor Here
 class Student
 {
     public:
@@ -265,20 +266,46 @@ int Stud2()
 // Student 2
 int Stud3()
 {
+    // stud2 is make an instance of Student class
+    Student stud3;
+    // the "." is ues to access and assign values
+    stud3.name = "Timmy";
+    stud3.major = "Psychology";
+    stud3.gpa = 2.5;
 
+    // Intro string
+    std::cout << "Heres the info on Student2" << std::endl;
+    std::cout << "Press any key" << std::endl;
+    std::cin.get();
+
+    // After input 
+    std::cout << stud3.name << std::endl;
+    std::cout << stud3.major << std::endl;
+    std::cout << stud3.gpa << std::endl;
+
+    // User Input 
+    std::cout << "Press any Key ";
+    std::cin.get();
+
+    AnotherStud();
 
     return 0;
 
+
 }
 
+
+/* Updates: 
+- I added constructors 
+- Added Stud3
+*/
 
 /* Updates: 
 -I added constructors 
 
 */
 
+// Finishing adding Stud3
+// Next add the feature for input!
 
-/* Future Updates:
-Finishing adding Stud3
-Next add the feature for input!
-*/
+// I added constructors
