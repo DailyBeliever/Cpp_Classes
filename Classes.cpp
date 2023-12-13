@@ -309,8 +309,13 @@ int Stud3()
 }
 
 
+/* Updates: 
+- I added constructors 
+- Added Stud3
+*/
 
-// Finishing adding Stud3
-// Next add the feature for input!
 
-// I added constructors
+/* Future Updates:
+Finishing adding Stud3
+Next add the feature for input!
+*/
