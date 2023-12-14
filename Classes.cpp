@@ -4,7 +4,7 @@
 // This Program is to refresh on C++ Classes
 // Made by Daily
 // I use 2 different methods to use the classes..
-// 1 with constructors the other without...
+// 1 with constructors and the other without...
 
 // Function declartions
 int AnotherStud();
@@ -21,7 +21,7 @@ class Student
     public:
         std::string name;
         std::string major;
-        int gpa;
+        double gpa;
 };
 
 // This is a data type Prof
@@ -46,18 +46,18 @@ int main()
     int stud_prof;
 
     std::cout << "Welcome to the Student | Prof Class Program" << std::endl;
-    std::cout << "Press any key to begin ";
+    std::cout << "Press Enter to begin " ;
     // This will allow for any input to begin
     std::cin.get();
-    std::cout << "========================" << std::endl;
+  //std::cout << "========================" << std::endl;
 
     // This will clear the screen
     std::system("cls");
 
     std::cout << "Did you want info on Student or Prof?" <<std::endl;
-    std::cout << "1 for Student | 2 for Prof ";
+    std::cout << "1 for Student | 2 for Prof " << std::endl;
 
-    std::cin >> stud_prof;
+    std::cout << "Your Input: "; std::cin >> stud_prof;
     if(stud_prof == 1)
     {
     std::system("cls");      
@@ -87,7 +87,7 @@ int AnotherStud()
     std::cout << "Would you like to see a Student?" << std::endl;
     std::cout << "1 = Yes | 2 = Exit" << std::endl; 
 
-    std::cin >> input1;
+    std::cout << "Your Input: "; std::cin >> input1;
     if(input1 == 1)
     {
         // User input of choice
@@ -96,7 +96,7 @@ int AnotherStud()
         std::cout << "Which student would you like to see?" << std::endl;
         std::cout << "1,2, or 3?" << std::endl;
         
-        std::cin >> choice;
+        std::cout << "Your Input: "; std::cin >> choice;
         if(choice == 1)
         {
              // This will clear the screen
@@ -104,15 +104,18 @@ int AnotherStud()
             // Goes to the Stud1 Function
             Stud1();
         }
-        if(choice == 2)
+        else if(choice == 2)
         {
             // This will clear the screen
             std::system("cls");
             // Goes to Stud2 Function
             Stud2();
         }
-        if(choice == 3)
+        else if(choice == 3)
         {
+            // This will clear the screen
+            std::system("cls");
+            // Goes to Stud2 Function
             Stud3();
         }
         else
@@ -121,7 +124,7 @@ int AnotherStud()
             AnotherStud();
         }
     }
-    if(input1 == 2)
+    else if(input1 == 2)
     {
         // Will exit the program
         exit(0);
@@ -131,7 +134,6 @@ int AnotherStud()
         std::cout << "You entered a wrong input" << std::endl;
         AnotherStud();
     }
-
 
     return 0;
 
@@ -146,7 +148,7 @@ int AnotherProf()
     std::cout << "Would you like to see a Prof?" << std::endl;
     std::cout << "1 = Yes | 2 = Exit" << std::endl; 
 
-    std::cin >> input2;
+    std::cout << "Your Input: "; std::cin >> input2;
     if(input2 == 1)
     {
         // User input of choice
@@ -155,30 +157,28 @@ int AnotherProf()
         std::cout << "Which Prof would you like to see?" << std::endl;
         std::cout << "1,2, or 3?" << std::endl;
 
-        std::cin >> choice2;
+        std:: cout << "Your Input: "; std::cin >> choice2;
         if(choice2 == 1)
         {
             Prof prof1("Jones","CSULA");
             std::cout << prof1.name << std::endl;
-            std::system("cls");
+            std::cout << prof1.school << std::endl;
             AnotherProf();
         }
 
-        if(choice2 == 2)
+        else if(choice2 == 2)
         {
             Prof prof2("Timmy", "CSULB");
             std::cout << prof2.name << std::endl;
             std::cout << prof2.school << std::endl; 
-            std::system("cls");
             AnotherProf();
 
         }
-        if(choice2 == 3)
+        else if(choice2 == 3)
         {
             Prof prof3("Carol", "LBCC");
             std::cout << prof3.name << std::endl;
             std::cout << prof3.school <<std::endl;
-            std::system("cls");
             AnotherProf();
         }
         else
@@ -186,7 +186,8 @@ int AnotherProf()
             std::cout << "You entered a wrong input" << std::endl;
             AnotherProf();
         }
-    if(input2 == 2)
+    }
+    else if(input2 == 2)
     {
         // Will exit the program
         exit(0);
@@ -194,10 +195,9 @@ int AnotherProf()
     else
     {
         std::cout << "You entered a wrong input" << std::endl;
-        AnotherStud();
+        AnotherProf();
     }
 
-    }
 
     return 0;
 
@@ -213,21 +213,26 @@ int Stud1()
     stud1.major = "Computer Science";
     stud1.gpa = 3.2;
     
+    // Clear input buffer
+    std::cin.ignore();
+
     // Intro string
-    std::cout << "Heres the info on Student1" << std::endl;
-    std::cout << "Press any key" << std::endl;
-    std::cin.get();
+    std::cout << "Heres the info on Student1: " << std::endl;
+    // std::cout << "Press any key" << std::endl;
 
     // Student1 Info
-    std::cout << stud1.name << std::endl;
-    std::cout << stud1.major << std::endl;
-    std::cout << stud1.gpa << std::endl;
+    std::cout << "Name: " << stud1.name << std::endl;
+    std::cout << "Major: " << stud1.major << std::endl;
+    std::cout << "GPA: " << stud1.gpa << std::endl;
     
     // User Input 
-    std::cout << "Press any Key ";
+    std::cout << "Press Enter to continue " << std::endl;
     std::cin.get();
 
+    // Returns to AnotherStud Function
     AnotherStud();
+    // Clears the screen
+    std::system("cls"); // <-- Determine if this is needed?
 
     return 0;
 
@@ -236,27 +241,33 @@ int Stud1()
 // Student 2
 int Stud2()
 {
-    // stud2 is make an instance of Student class
+    // stud2 is an instance of Student class
     Student stud2;
     // the "." is ues to access and assign values
     stud2.name = "Jake";
     stud2.major = "Biology";
     stud2.gpa = 2.8;
 
-    // Intro string
-    std::cout << "Heres the info on Student1" << std::endl;
-    std::cout << "Press any key" << std::endl;
-    std::cin.get();
+    // Clear input buffer
+    std::cin.ignore();
 
-    std::cout << stud2.name << std::endl;
-    std::cout << stud2.major << std::endl;
-    std::cout << stud2.gpa << std::endl;
+    // Intro string
+    std::cout << "Heres the info on Student2: " << std::endl;
+    // std::cout << "Press any key" << std::endl;
+
+    // Student2 Info
+    std::cout << "Name: " << stud2.name << std::endl;
+    std::cout << "Major: " << stud2.major << std::endl;
+    std::cout <<"GPA: " << stud2.gpa << std::endl;
 
     // User Input 
-    std::cout << "Press any Key ";
+    std::cout << "Press Enter to continue ";
     std::cin.get();
 
+    // Returns to AnotherStud Function
     AnotherStud();
+    // Clears the screen
+    std::system("cls"); // <-- Determine if this is needed?
 
     return 0;
 
@@ -266,7 +277,7 @@ int Stud2()
 // Student 2
 int Stud3()
 {
-    // stud2 is make an instance of Student class
+    // stud2 is an instance of Student class
     Student stud3;
     // the "." is ues to access and assign values
     stud3.name = "Timmy";
@@ -274,38 +285,26 @@ int Stud3()
     stud3.gpa = 2.5;
 
     // Intro string
-    std::cout << "Heres the info on Student2" << std::endl;
-    std::cout << "Press any key" << std::endl;
-    std::cin.get();
+    std::cout << "Heres the info on Student3: " << std::endl;
+    // std::cout << "Press Enter to continue ";
+
+    // Clear input buffer
+    std::cin.ignore();
 
     // After input 
-    std::cout << stud3.name << std::endl;
-    std::cout << stud3.major << std::endl;
-    std::cout << stud3.gpa << std::endl;
+    std::cout << "Name: " << stud3.name << std::endl;
+    std::cout <<"Major: " << stud3.major << std::endl;
+    std::cout <<"GPA: " << stud3.gpa << std::endl;
 
     // User Input 
-    std::cout << "Press any Key ";
+    std::cout << "Press enter to continue ";
     std::cin.get();
 
+    // Returns to AnotherStud Function
     AnotherStud();
+    // Clears the screen
+    std::system("cls"); // <-- Determine if this is needed?
 
     return 0;
 
-
 }
-
-
-/* Updates: 
-- I added constructors 
-- Added Stud3
-*/
-
-/* Updates: 
--I added constructors 
-
-*/
-
-// Finishing adding Stud3
-// Next add the feature for input!
-
-// I added constructors
