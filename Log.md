@@ -9,8 +9,11 @@
 - Logic Updates
 - Updated Students
 
-### 12/??/23
+### 12/14/23
 - Expand on Students
+
+### 12/??/23
+- Expanded more on Students
 
 # Upcoming Implementations: 
 - I added constructors 
