@@ -161,24 +161,24 @@ int AnotherProf()
         if(choice2 == 1)
         {
             Prof prof1("Jones","CSULA");
-            std::cout << prof1.name << std::endl;
-            std::cout << prof1.school << std::endl;
+            std::cout << "Name: " << prof1.name << std::endl;
+            std::cout << "School: " << prof1.school << std::endl;
             AnotherProf();
         }
 
         else if(choice2 == 2)
         {
             Prof prof2("Timmy", "CSULB");
-            std::cout << prof2.name << std::endl;
-            std::cout << prof2.school << std::endl; 
+            std::cout << "Name: " << prof2.name << std::endl;
+            std::cout << "School:" << prof2.school << std::endl; 
             AnotherProf();
 
         }
         else if(choice2 == 3)
         {
             Prof prof3("Carol", "LBCC");
-            std::cout << prof3.name << std::endl;
-            std::cout << prof3.school <<std::endl;
+            std::cout << "Name: " << prof3.name << std::endl;
+            std::cout << "School: " << prof3.school <<std::endl;
             AnotherProf();
         }
         else
