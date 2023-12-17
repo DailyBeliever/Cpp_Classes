@@ -85,7 +85,7 @@ int AnotherStud()
     int input1;
 
     std::cout << "Would you like to see a Student?" << std::endl;
-    std::cout << "1 = Yes | 2 = Exit" << std::endl; 
+    std::cout << "1 = Yes |2 = Go Back |3 = Exit" << std::endl; 
 
     std::cout << "Your Input: "; std::cin >> input1;
     if(input1 == 1)
@@ -126,6 +126,10 @@ int AnotherStud()
     }
     else if(input1 == 2)
     {
+        main();
+    }
+    else if(input1 = 3)
+    {
         // Will exit the program
         exit(0);
     }
@@ -146,7 +150,7 @@ int AnotherProf()
     int input2;
 
     std::cout << "Would you like to see a Prof?" << std::endl;
-    std::cout << "1 = Yes | 2 = Exit" << std::endl; 
+    std::cout << "1 = Yes |2 = Go Back |3 = Exit" << std::endl; 
 
     std::cout << "Your Input: "; std::cin >> input2;
     if(input2 == 1)
@@ -160,6 +164,7 @@ int AnotherProf()
         std:: cout << "Your Input: "; std::cin >> choice2;
         if(choice2 == 1)
         {
+            std::system("cls");
             Prof prof1("Jones","CSULA");
             std::cout << "Name: " << prof1.name << std::endl;
             std::cout << "School: " << prof1.school << std::endl;
@@ -168,6 +173,7 @@ int AnotherProf()
 
         else if(choice2 == 2)
         {
+            std::system("cls");
             Prof prof2("Timmy", "CSULB");
             std::cout << "Name: " << prof2.name << std::endl;
             std::cout << "School:" << prof2.school << std::endl; 
@@ -176,6 +182,7 @@ int AnotherProf()
         }
         else if(choice2 == 3)
         {
+            std::system("cls");
             Prof prof3("Carol", "LBCC");
             std::cout << "Name: " << prof3.name << std::endl;
             std::cout << "School: " << prof3.school <<std::endl;
@@ -188,6 +195,10 @@ int AnotherProf()
         }
     }
     else if(input2 == 2)
+    {
+        main();
+    }
+    else if(input2 == 3)
     {
         // Will exit the program
         exit(0);

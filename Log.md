@@ -10,10 +10,15 @@
 - Updated Students
 
 ### 12/14/23
-- Expand on Students
+- Updated README MD
 
-### 12/??/23
-- Expanded more on Students
+### 12/15/23
+- Bug Fixes
+
+
+### 12/16/23
+- Expanded more on Prof
+- Added the ability to go Back to previous screen
 
 # Upcoming Implementations: 
 - I added constructors 
