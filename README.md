@@ -5,4 +5,4 @@
 ## How To Run
 1) Find the directory where program is located
 2) Run terminal from this directory
-2) Luanch the program with  -> .\Guessing_Game
+2) Launch the program with  -> .\Classes.exe

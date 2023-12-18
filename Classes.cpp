@@ -55,7 +55,7 @@ int main()
     std::system("cls");
 
     std::cout << "Did you want info on Student or Prof?" <<std::endl;
-    std::cout << "1 for Student | 2 for Prof " << std::endl;
+    std::cout << "1 for Student | 2 for Prof | 3 to exit" << std::endl;
 
     std::cout << "Your Input: "; std::cin >> stud_prof;
     if(stud_prof == 1)
@@ -69,6 +69,10 @@ int main()
     std::system("cls");
     AnotherProf();
     }
+    if(stud_prof ==3)
+    {
+        exit(0);        
+    }
     else
     {
         std::cout <<"Wrong input try again!" << std::endl;
@@ -79,13 +83,14 @@ int main()
 
 }
 
+
 int AnotherStud()
 {
     // User input
     int input1;
 
     std::cout << "Would you like to see a Student?" << std::endl;
-    std::cout << "1 = Yes |2 = Go Back |3 = Exit" << std::endl; 
+    std::cout << "1 = Yes | 2 = Go Back | 3 = Exit" << std::endl; 
 
     std::cout << "Your Input: "; std::cin >> input1;
     if(input1 == 1)
@@ -150,7 +155,7 @@ int AnotherProf()
     int input2;
 
     std::cout << "Would you like to see a Prof?" << std::endl;
-    std::cout << "1 = Yes |2 = Go Back |3 = Exit" << std::endl; 
+    std::cout << "1 = Yes | 2 = Go Back | 3 = Exit" << std::endl; 
 
     std::cout << "Your Input: "; std::cin >> input2;
     if(input2 == 1)

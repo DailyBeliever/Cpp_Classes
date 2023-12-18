@@ -20,11 +20,12 @@
 - Expanded more on Prof
 - Added the ability to go Back to previous screen
 
-# Upcoming Implementations: 
-- I added constructors 
-- Next add the feature for input!
-- Be able to go from Prof and Stud
+### 12/17/24
+- Added to main
+- The ability to go back and forth from student to prof via "Go Back"
 
+### 12/18/23
+- Finished with program for now
 
 # Logic
 ### If logic:
